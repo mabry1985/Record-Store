@@ -21,3 +21,15 @@
   </div>
   <button type="submit" class="btn">Go!</button>
 </form>
+
+<h3>Records Sold</h3>
+
+<% if @albums_sold.any? %>
+  <ul>
+    <% @albums_sold.each do |album| %>
+      <li><a href=""><%= album.name %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No albums have neen sold</p>
+<% end %>
